@@ -3,6 +3,7 @@ require 'cucumber/rake/task'
 require 'mongo'
 require 'csv'
 require 'cucumber'
+require 'karma'
 
 base = File.dirname(__FILE__)
 Dir.glob(base + '/lib/*.rb').each { |f| require f }
