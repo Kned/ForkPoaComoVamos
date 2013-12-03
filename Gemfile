@@ -9,9 +9,10 @@ gem 'formatador'
 gem 'nokogiri'
 gem 'rufus-scheduler'
 gem 'cucumber'
+gem 'jasmine-headless-webkit'
 
 group :test, :development do
-	gem 'cucumber'
+  gem 'cucumber'
   gem 'shotgun'
   gem 'tux'
   gem 'pry'
