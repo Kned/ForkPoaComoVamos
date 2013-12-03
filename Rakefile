@@ -9,7 +9,7 @@ Dir.glob(base + '/lib/*.rb').each { |f| require f }
 include Mongo
 
 desc "Roda todos os testes (javascript e cucumber)"
-task :test => [:spec, :features] #:jstest
+task :test => [:spec, :jstest, :features]
 
 desc "Roda os testes em CI (excluindo JS por enquanto)"
 task :ci => [:spec, :features]
@@ -20,13 +20,13 @@ task :features do
     t.cucumber_opts = "features --format pretty --tag ~@pending"
   end
 end
-=begin
+
 desc "Roda os testes de javascript"
 task :jstest do
   puts "===== Testes de Javascript ====="
   sh 'karma start'
 end
-=end
+
 desc "Roda os testes de unidade"
 task :spec do
   puts "===== Testes de Unidade ====="
